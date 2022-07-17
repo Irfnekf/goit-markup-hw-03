@@ -17,6 +17,7 @@ body {
   --project-card-shadow: #eeeeee;
   --box-shadow-card: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  --border-header-color: #ececec;
 }
 .list {
   list-style: none;
@@ -28,6 +29,11 @@ h3,
 p {
   margin: 0;
   padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .section {
   padding-bottom: 94px;
@@ -44,7 +50,7 @@ p {
 
 /*header*/
 .header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border-header-color);
 }
 .header-con {
   display: flex;
@@ -61,6 +67,11 @@ p {
   color: var(--button-link-primary);
   text-decoration: none;
   letter-spacing: 0.03em;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  font-family: 'Raleway';
+  margin-right: 93px;
 }
 .logo-studio {
   color: var(--logo-secondary-color);
@@ -73,13 +84,7 @@ p {
 .logo-item:last-child {
   margin-right: 0;
 }
-.logotyp {
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  font-family: 'Raleway';
-  margin-right: 93px;
-}
+
 .link {
   display: block;
   padding-top: 30px;
@@ -137,6 +142,9 @@ p {
   padding-bottom: 200px;
 }
 .hero-title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
   color: var(--primay-bg-color);
   font-weight: 900;
@@ -183,6 +191,7 @@ p {
 }
 .peculiarity-list {
   margin-right: 30px;
+  width: 1170px;
 }
 .peculiarity-list:last-child {
   margin-right: 0;
@@ -235,7 +244,6 @@ p {
   margin-right: 30px;
   background-color: var(--primay-bg-color);
   text-align: center;
-  padding-bottom: 30px;
   box-shadow: var(--box-shadow-card);
   border-radius: 0px 0px 4px 4px;
 }
@@ -264,6 +272,7 @@ p {
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+  padding-bottom: 30px;
 }
 /* footer */
 
@@ -273,6 +282,7 @@ p {
   background-color: var(--tertiary-bg-color);
 }
 .logo-foot {
+  display: inline-block;
   margin-bottom: 20px;
   letter-spacing: 0.03em;
 }
@@ -353,9 +363,6 @@ p {
   margin-right: 30px;
   margin-bottom: 30px;
   width: 370px;
-  height: 404px;
-  border: 1px solid var(--project-card-shadow);
-  box-sizing: border-box;
 }
 .project-cards:nth-child(3n) {
   margin-right: 0;
@@ -365,16 +372,19 @@ p {
 }
 .project-title {
   margin-bottom: 4px;
-  padding-top: 20px;
-  padding-left: 24px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
+.project-block {
+  padding: 20px 24px 20px 24px;
+  border: 1px solid var(--project-card-shadow);
+  border-top: 0;
+}
 .project-text {
-  padding-left: 24px;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.9;
@@ -382,4 +392,5 @@ p {
 }
 .project-link {
   text-decoration: none;
+  display: block;
 }
